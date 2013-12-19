@@ -1,0 +1,25 @@
+%h1 Listing hoges
+
+%table
+  %tr
+    %th Titile
+    %th Comment
+    %th Startdate
+    %th Enddate
+    %th
+    %th
+    %th
+
+  - @hoges.each do |hoge|
+    %tr
+      %td= hoge.titile
+      %td= hoge.comment
+      %td= hoge.startdate
+      %td= hoge.enddate
+      %td= link_to 'Show', hoge
+      %td= link_to 'Edit', edit_hoge_path(hoge)
+      %td= link_to 'Destroy', hoge, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Hoge', new_hoge_path

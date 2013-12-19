@@ -1,0 +1,39 @@
+class Api::PhotoController < ApplicationController
+  before_filter :authenticate_user! ,:only => [:new, :edit ,:create, :update, :destroy]
+  respond_to :json
+  def create
+    return render :status => 422 unless current_user.travel_ids.include?(params[:photo][:travel_id].to_i)
+    image = current_user.travels.find_by_id(params[:photo][:travel_id]).albums.first.photos.new(:image => params[:photo][:image],:user => current_user)
+    if image.save!
+      render :json => {:success => true}
+    else
+      render :json=>{:success=>false, :message=>"missing user_login parameter"}, :status=>422
+    end
+ 
+  end
+
+  def index
+    return render :status => 422 unless params.has_key?(travel_id)
+  1  class Api::PhotoController < ApplicationController
+  2    before_filter :authenticate_user! ,:only => [:new, :edit ,:create, :update, :destroy]
+  3    respond_to :json
+  4    def create
+  5      return render :status => 422 unless current_user.travel_ids.include?(params[:photo][:travel_id].to_i)
+  6      image = current_user.travels.find_by_id(params[:photo][:travel_id]).albums.first.photos.new(:image => params[:photo][:image],:user => current_user)
+  7      if image.save!
+         8        render :json => {:success => true}
+  9      else
+         10        render :json=>{:success=>false, :message=>"missing user_login parameter"}, :status=>422
+ 11      end
+ 12
+ 13    end
+ 14
+ 15    def index
+ 16      return render :status => 422 unless params.has_key?(travel_id)
+ 17      photos = Trave.find_by_id(travel_id).albums.first.photos
+         18      render :json => {:photos => photos
+    photos = Trave.find_by_id(travel_id).albums.first.photos
+    render :json => {:photos => photos}
+  end
+
+end

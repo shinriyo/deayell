@@ -1,0 +1,29 @@
+platform :ios, '5.0'
+
+pod 'DCIntrospect'
+pod 'GHUnitIOS'
+
+pod 'BlocksKit'
+pod 'Underscore.m'
+
+pod 'AQGridView'
+pod 'QuickDialog'
+pod 'JASidePanels'
+
+pod 'OCCalendar'
+pod 'SDWebImage'
+
+pod 'SVProgressHUD'
+
+
+pod 'Reachability'
+pod 'AFNetworking'
+
+pod 'MagicalRecord'
+
+
+pod 'LUKeychainAccess'
+
+pod 'SVWebViewController'
+pod 'NoticeView'
+pod 'ELCImagePickerController'
