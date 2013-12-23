@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 Yuuna Kurita. All rights reserved.
 //
 
-#import "TPRegistController.h"
+#import "TPRegisterController.h"
 
-@interface TPRegistController ()
+@interface TPRegisterController ()
 
 @end
 
-@implementation TPRegistController
+@implementation TPRegisterController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,39 +27,35 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIBarButtonItem *submitButtonItem =    [[UIBarButtonItem alloc] initWithTitle:@"登録"
+    UIBarButtonItem *submitButtonItem =    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"TPRegisterControllerRegister", nil)
                                                                             style:UIBarButtonItemStyleDone
                                                                            target:self action:@selector(onSubmit)];
     [self.navigationItem setRightBarButtonItem:submitButtonItem];
+
+    self.root.title = NSLocalizedString(@"TPRegisterControllerNewMemberRegister", nil);
     
-    
-        
-    self.root.title = @"新規会員登録";
-    
-    QSection *section2 = [[QSection alloc] initWithTitle:@"ログイン情報"];
+    QSection *section2 = [[QSection alloc] initWithTitle:NSLocalizedString(@"TPRegisterControllerLoginInfo", nil)];
     QEntryElement *email = [[QEntryElement alloc] initWithKey:@"email"];
     email.keyboardType = UIKeyboardTypeEmailAddress;
     email.bind = @"textValue:email";
-    email.title = @"メールアドレス";
+    email.title = NSLocalizedString(@"TPRegisterControllerEmail", nil);
     
     QEntryElement *username = [[QEntryElement alloc] initWithKey:@"username"];
     username.keyboardType = UIKeyboardAppearanceDefault;
     username.bind = @"textValue:username";
-    username.title = @"ユーザー名";
+    username.title = NSLocalizedString(@"TPRegisterControllerUserName", nil);
     
     
     QEntryElement *password = [[QEntryElement alloc] initWithKey:@"password"];
     password.bind = @"textValue:password";
     password.secureTextEntry = TRUE;
-    password.title = @"パスワード";
+    password.title = NSLocalizedString(@"TPRegisterControllerPassword", nil);
     
     QEntryElement *password_confirm = [[QEntryElement alloc] initWithKey:@"password_confirm"];
     password_confirm.bind = @"textValue:password";
     password_confirm.secureTextEntry = TRUE;
-    password_confirm.title = @"パスワード（確認）";
-    
+    password_confirm.title = NSLocalizedString(@"TPRegisterControllerPasswordConfirm", nil);
 
-    
     [self.root addSection:section2];
     [section2 addElement: email];
     [section2 addElement: username];

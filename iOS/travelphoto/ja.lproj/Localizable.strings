@@ -5,3 +5,29 @@
   Created by 17age forever on 12/23/13.
   Copyright (c) 2013 Yuuna Kurita. All rights reserved.
 */
+
+// TPLoginController
+TPLoginControllerSending = "送信中";
+TPLoginControllerNoFormData = "フォームに値が入力されていません。";
+// TODO: 適用する
+TPLoginControllerLoginForm = "ログインフォーム";
+TPLoginControllerEmailMsg = "メールアドレスを入力してください";
+TPLoginControllerPasswordMsg = "パスワードを入力してください";
+TPLoginControllerPassword = "Password";
+TPLoginControllerLogin = "ログインする";
+TPLoginControllerNewRegister = "新規登録";
+TPLoginControllerResendPass = "パスワード再送信";
+TPLoginControllerFacebookRegister = "facebookで登録・ログイン";
+TPLoginControllerErrorHappened = "エラーが発生しました";
+TPLoginControllerEMaiErrorHappened = "メールアドレスまたはパスワードが間違っています";
+TPLoginControllerConfirm = "確認";
+
+// TPRegisterController
+TPRegisterControllerRegister = "登録";
+TPRegisterControllerNewMemberRegister = "新規会員登録";
+TPRegisterControllerLoginInfo = "ログイン情報";
+TPRegisterControllerEmail = "メールアドレス";
+TPRegisterControllerUserName = "ユーザー名";
+TPRegisterControllerPassword = "パスワード";
+TPRegisterControllerPasswordConfirm = "パスワード（確認）";
+

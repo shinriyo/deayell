@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6C75A661-B815-4781-BB54-08537790BFD5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>travelphoto</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E583FB8-E801-4C59-ABD1-6CC012905AD9</key>
+		<string>ssh://github.com/shinriyo/deayell.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/travelphoto/travelphoto.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E583FB8-E801-4C59-ABD1-6CC012905AD9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/shinriyo/deayell.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E583FB8-E801-4C59-ABD1-6CC012905AD9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E583FB8-E801-4C59-ABD1-6CC012905AD9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>travelphoto</string>
+		</dict>
+	</array>
+</dict>
+</plist>

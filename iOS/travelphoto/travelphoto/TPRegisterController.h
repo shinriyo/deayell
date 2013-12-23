@@ -8,6 +8,6 @@
 
 #import "QuickDialogController.h"
 
-@interface TPRegistController : QuickDialogController
+@interface TPRegisterController : QuickDialogController
 
 @end

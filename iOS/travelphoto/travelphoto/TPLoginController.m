@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.root.title = @"ログインフォーム";
-
+    
     
     QSection *section = [[QSection alloc] init];
     QEntryElement *email = [[QEntryElement alloc] initWithKey:@"email"];
@@ -58,7 +58,6 @@
     [section2 addElement: loginbtn];
     
 
-        
     QSection *section3 = [[QSection alloc] init];
     QButtonElement *newbtn = [[QButtonElement alloc] initWithKey:@"button"];
     newbtn.title = @"新規登録";
@@ -85,8 +84,6 @@
     [self.root addSection:section5];
     [section5 addElement: facebookbtn];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestFromFacebook) name:TPLoginFacebook object:nil];
-
-    
 }
 
 - (void)onFacebookLogin{
@@ -170,7 +167,7 @@
     //登録画面に移動
     QRootElement *root = [[QRootElement alloc] init];
     root.grouped = YES;
-    TPRegistController *viewController = (TPRegistController *) [[TPRegistController alloc] initWithRoot:root];
+    TPRegisterController *viewController = (TPRegisterController *) [[TPRegisterController alloc] initWithRoot:root];
     [self.navigationController pushViewController:viewController animated:YES];
     
 }
@@ -178,13 +175,13 @@
 
 - (void)onLogin{
 
-    [SVProgressHUD showWithStatus:@"送信中" maskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"TPLoginControllerSending", nil) maskType:SVProgressHUDMaskTypeBlack];
     QEntryElement *email = (QEntryElement *)[self.root elementWithKey:@"email"];
     QEntryElement *password = (QEntryElement *)[self.root elementWithKey:@"password"];
     
     
     if(email.textValue == NULL || password.textValue == NULL){
-        [SVProgressHUD showErrorWithStatus:@"フォームに値が入力されていません。"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"TPLoginControllerSending", nil)];
         return;
     }
     

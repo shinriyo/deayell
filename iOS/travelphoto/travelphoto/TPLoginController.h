@@ -7,7 +7,7 @@
 //
 
 #import "QuickDialogController.h"
-#import "TPRegistController.h"
+#import "TPRegisterController.h"
 
 @interface TPLoginController : QuickDialogController 
 

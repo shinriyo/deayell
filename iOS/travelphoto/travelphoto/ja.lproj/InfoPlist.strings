@@ -1,2 +1,4 @@
 /* Localized versions of Info.plist keys */
 
+CFBundleName = "出会え〜る";
+CFBundleDisplayName = "出会え〜る";

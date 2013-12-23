@@ -5,3 +5,28 @@
   Created by 17age forever on 12/23/13.
   Copyright (c) 2013 Yuuna Kurita. All rights reserved.
 */
+
+// TPLoginController
+TPLoginControllerSending = "Sending";
+TPLoginControllerNoFormData = "Not filled in the form";
+// TODO: 翻訳する
+TPLoginControllerLoginForm = "ログインフォーム";
+TPLoginControllerEmailMsg = "メールアドレスを入力してください";
+TPLoginControllerPasswordMsg = "パスワードを入力してください";
+TPLoginControllerPassword = "Password";
+TPLoginControllerLogin = "ログインする";
+TPLoginControllerNewRegister = "新規登録";
+TPLoginControllerResendPass = "パスワード再送信";
+TPLoginControllerFacebookRegister = "facebookで登録・ログイン";
+TPLoginControllerErrorHappened = "エラーが発生しました";
+TPLoginControllerEMaiErrorHappened = "メールアドレスまたはパスワードが間違っています";
+TPLoginControllerConfirm = "確認";
+
+// TPRegisterController
+TPRegisterControllerRegister = "Submit";
+TPRegisterControllerNewMemberRegister = "New Member Register";
+TPRegisterControllerLoginInfo = "Login Information";
+TPRegisterControllerEmail = "E-mail";
+TPRegisterControllerUserName = "Name";
+TPRegisterControllerPassword = "Password";
+TPRegisterControllerPasswordConfirm = "Password(confirmation)";
