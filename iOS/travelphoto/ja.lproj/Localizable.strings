@@ -29,7 +29,6 @@ TPRegisterControllerEmail = "メールアドレス";
 TPRegisterControllerUserName = "ユーザー名";
 TPRegisterControllerPassword = "パスワード";
 TPRegisterControllerPasswordConfirm = "パスワード（確認）";
-// TODO:
 TPRegisterControllerSending = "送信中";
 TPRegisterControllerNoFormData = "フォームに値が入力されていません。";
 TPRegisterControllerCreateDone = "作成が完了しました";
@@ -46,3 +45,6 @@ TPTravelCreateControllerErrorHappened = "エラーが発生しました";
 TPTravelCreateControllerFrom = "%@から%@";
 
 // TPTravelShowController
+
+// TPFriendController
+// TODO:

@@ -29,7 +29,6 @@ TPRegisterControllerEmail = "이메일";
 TPRegisterControllerUserName = "이름";
 TPRegisterControllerPassword = "비밀번호";
 TPRegisterControllerPasswordConfirm = "비밀번호（확인）";
-// TODO:
 TPRegisterControllerSending = "송신중";
 TPRegisterControllerNoFormData = "폼에 값이 입력 안 되었습니다. ";
 TPRegisterControllerCreateDone = "작성이 완료했습니다";
@@ -40,3 +39,11 @@ TPRegisterControllerConfirm = "확인";
 // TPSettingController
 // TODO:
 TPSettingControllerLogout = "로그 아웃";
+
+// TPTravelCreateController
+// TODO:
+TPTravelCreateControllerErrorHappened = "エラーが発生しました";
+TPTravelCreateControllerFrom = "%@から%@";
+
+// TPFriendController
+// TODO:

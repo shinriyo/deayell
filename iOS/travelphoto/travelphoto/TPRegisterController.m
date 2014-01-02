@@ -72,7 +72,7 @@
 //
 - (void)onSubmit
 {
-    [SVProgressHUD showWithStatus:@"送信中" maskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"TPRegisterControllerSending", nil) maskType:SVProgressHUDMaskTypeBlack];
     // フォーム取得
     QEntryElement *email = (QEntryElement *)[self.root elementWithKey:@"email"];
     QEntryElement *password = (QEntryElement *)[self.root elementWithKey:@"password"];
@@ -80,7 +80,7 @@
     QEntryElement *username = (QEntryElement *)[self.root elementWithKey:@"username"];
     
     if(email.textValue == NULL || password.textValue == NULL || password_confirm.textValue == NULL || username.textValue == NULL ) {
-        [SVProgressHUD showErrorWithStatus:@"フォームに値が入力されていません。"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"TPRegisterControllerNoFormData", nil)];
         return;
     }
 
@@ -110,24 +110,16 @@
                                          
                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response,id JSON) {
                                              [[NSNotificationCenter defaultCenter] postNotificationName:TPReloadTravels object:self userInfo:nil];
-/*
- TPRegisterControllerSending = "Sending";
- TPRegisterControllerNoFormData = "Form's data is empty.";
- TPRegisterControllerCreateDone = "Creating is done";
- TPRegisterControllerErrorHappened = "Error occured";
- TPRegisterControllerEmailErrorHappened = "Mistook E-mail address or password";
- TPRegisterControllerConfirm = "confirm";
- */
                                              
                                              [self.navigationController popToRootViewControllerAnimated:YES];
                                              
-                                             [SVProgressHUD showSuccessWithStatus:@"作成が完了しました"];
+                                             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"TPRegisterControllerCreateDone", nil)];
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              //NSLog(@"Error: %@", error);
                                              NSLog(@"Error: %@", [error localizedRecoverySuggestion]);
                                              
-                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"エラーが発生しました" message:@"メールアドレスまたはパスワードが間違っています"
-                                                                                               delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"TPRegisterControllerErrorHappened", nil) message:NSLocalizedString(@"TPRegisterControllerEmailErrorHappened", nil)
+                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"TPRegisterControllerConfirm", nil) otherButtonTitles:nil];
                                              [alertView show];
                                              [SVProgressHUD dismiss];
                                          }];
