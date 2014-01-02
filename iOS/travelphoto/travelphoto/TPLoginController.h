@@ -11,6 +11,6 @@
 
 @interface TPLoginController : QuickDialogController 
 
-- (void)onRegistFacebook:(NSString *)email uid:(NSString *)uid;
-
+//- (void)onRegisterFacebook:(NSString *)email uid:(NSString *)uid;
+- (void)onRegisterFacebook:(NSString *)email uid:(NSString *)uid username:(NSString *)username;
 @end

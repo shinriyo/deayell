@@ -61,9 +61,8 @@
     
 }
 
-
-- (void)onSubmit{
-    
+- (void)onSubmit
+{
     [SVProgressHUD showWithStatus:@"送信中" maskType:SVProgressHUDMaskTypeBlack];
     QEntryElement *title = (QEntryElement *)[self.root elementWithKey:@"title"];
     QDateTimeInlineElement *startdate = (QDateTimeInlineElement *)[self.root elementWithKey:@"startdate"];
@@ -80,7 +79,7 @@
 
     }
     
-    //通信処理
+    // 通信処理
     TravelPhotoAPI *tp_api = [TravelPhotoAPI sharedInstance];
     
     if([tp_api.networkStatus boolValue] == NO){
@@ -129,8 +128,6 @@
                                          }];
     [sharedClient enqueueHTTPRequestOperation:operation];
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

@@ -62,8 +62,6 @@
 
                                  TPTravelMapController *viewController =  [[TPTravelMapController alloc] init];
                                  [self.navigationController pushViewController:viewController animated:YES];
-                                 
-                                 
                              }];
     self.navigationItem.rightBarButtonItems = @[btn,btn2,btn3];
     

@@ -3,13 +3,12 @@
   travelphoto
 
   Created by 17age forever on 12/23/13.
-  Copyright (c) 2013 Yuuna Kurita. All rights reserved.
+  Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
 // TPLoginController
 TPLoginControllerSending = "送信中";
 TPLoginControllerNoFormData = "フォームに値が入力されていません。";
-// TODO: 適用する
 TPLoginControllerLoginForm = "ログインフォーム";
 TPLoginControllerEmailMsg = "メールアドレスを入力してください";
 TPLoginControllerPasswordMsg = "パスワードを入力してください";
@@ -30,4 +29,20 @@ TPRegisterControllerEmail = "メールアドレス";
 TPRegisterControllerUserName = "ユーザー名";
 TPRegisterControllerPassword = "パスワード";
 TPRegisterControllerPasswordConfirm = "パスワード（確認）";
+// TODO:
+TPRegisterControllerSending = "送信中";
+TPRegisterControllerNoFormData = "フォームに値が入力されていません。";
+TPRegisterControllerCreateDone = "作成が完了しました";
+TPRegisterControllerErrorHappened = "エラーが発生しました";
+TPRegisterControllerEmailErrorHappened = "メールアドレスまたはパスワードが間違っています";
+TPRegisterControllerConfirm = "確認";
+    
+// TPSettingController
+// TODO:
+TPSettingControllerLogout = "ログアウト";
 
+// TPTravelCreateController
+TPTravelCreateControllerErrorHappened = "エラーが発生しました";
+TPTravelCreateControllerFrom = "%@から%@";
+
+// TPTravelShowController

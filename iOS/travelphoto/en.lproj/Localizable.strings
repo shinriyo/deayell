@@ -3,24 +3,23 @@
   travelphoto
 
   Created by 17age forever on 12/23/13.
-  Copyright (c) 2013 Yuuna Kurita. All rights reserved.
+  Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
 // TPLoginController
 TPLoginControllerSending = "Sending";
 TPLoginControllerNoFormData = "Not filled in the form";
-// TODO: 翻訳する
-TPLoginControllerLoginForm = "ログインフォーム";
-TPLoginControllerEmailMsg = "メールアドレスを入力してください";
-TPLoginControllerPasswordMsg = "パスワードを入力してください";
+TPLoginControllerLoginForm = "Login Form";
+TPLoginControllerEmailMsg = "Put your E-mail address";
+TPLoginControllerPasswordMsg = "Put your password";
 TPLoginControllerPassword = "Password";
-TPLoginControllerLogin = "ログインする";
-TPLoginControllerNewRegister = "新規登録";
-TPLoginControllerResendPass = "パスワード再送信";
-TPLoginControllerFacebookRegister = "facebookで登録・ログイン";
-TPLoginControllerErrorHappened = "エラーが発生しました";
-TPLoginControllerEMaiErrorHappened = "メールアドレスまたはパスワードが間違っています";
-TPLoginControllerConfirm = "確認";
+TPLoginControllerLogin = "Login";
+TPLoginControllerNewRegister = "New";
+TPLoginControllerResendPass = "Resend password";
+TPLoginControllerFacebookRegister = "Login/Register Facebook";
+TPLoginControllerErrorHappened = "Error occured";
+TPLoginControllerEmailErrorHappened = "Mistook E-mail address or password";
+TPLoginControllerConfirm = "confirm";
 
 // TPRegisterController
 TPRegisterControllerRegister = "Submit";
@@ -29,4 +28,15 @@ TPRegisterControllerLoginInfo = "Login Information";
 TPRegisterControllerEmail = "E-mail";
 TPRegisterControllerUserName = "Name";
 TPRegisterControllerPassword = "Password";
-TPRegisterControllerPasswordConfirm = "Password(confirmation)";
+TPRegisterControllerPasswordConfirm = "Retype Password";
+// TODO:
+TPRegisterControllerSending = "Sending";
+TPRegisterControllerNoFormData = "Form's data is empty.";
+TPRegisterControllerCreateDone = "Creating is done";
+TPRegisterControllerErrorHappened = "Error occured";
+TPRegisterControllerEmailErrorHappened = "Mistook E-mail address or password";
+TPRegisterControllerConfirm = "confirm";
+
+// TPSettingController
+// TODO:
+TPSettingControllerLogout = "Logout";

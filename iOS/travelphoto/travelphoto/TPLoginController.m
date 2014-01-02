@@ -27,19 +27,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//}
+
+//- (void)viewDidAppear:(BOOL)animated
+//{
 	// Do any additional setup after loading the view.
-    self.root.title = @"ログインフォーム";
+    self.root.title = NSLocalizedString(@"TPLoginControllerLoginForm", nil);
     
     
     QSection *section = [[QSection alloc] init];
     QEntryElement *email = [[QEntryElement alloc] initWithKey:@"email"];
     email.keyboardType = UIKeyboardTypeEmailAddress;
-    email.placeholder = @"メールアドレスを入力してください";
+    email.placeholder = NSLocalizedString(@"TPLoginControllerEmailMsg", nil);
     email.bind = @"textValue:email";
     email.title = @"Email";
     
     QEntryElement *password = [[QEntryElement alloc] initWithKey:@"password"];
-    password.placeholder = @"パスワードを入力してください";
+    password.placeholder = NSLocalizedString(@"TPLoginControllerPasswordMsg", nil);
     password.bind = @"textValue:password";
     password.secureTextEntry = TRUE;
     password.title = @"Password";
@@ -51,7 +55,7 @@
     
     QSection *section2 = [[QSection alloc] init];
     QButtonElement *loginbtn = [[QButtonElement alloc] initWithKey:@"button"];
-    loginbtn.title = @"ログインする";
+    loginbtn.title = NSLocalizedString(@"TPLoginControllerLogin", nil);
     loginbtn.controllerAction = @"onLogin";
     
     [self.root addSection:section2];
@@ -60,8 +64,8 @@
 
     QSection *section3 = [[QSection alloc] init];
     QButtonElement *newbtn = [[QButtonElement alloc] initWithKey:@"button"];
-    newbtn.title = @"新規登録";
-    newbtn.controllerAction = @"onRegist";
+    newbtn.title = NSLocalizedString(@"TPLoginControllerNewRegister", nil);
+    newbtn.controllerAction = @"onRegister";
     
     [self.root addSection:section3];
     [section3 addElement: newbtn];
@@ -69,7 +73,7 @@
     
     QSection *section4 = [[QSection alloc] init];
     QButtonElement *passwordbtn = [[QButtonElement alloc] initWithKey:@"button"];
-    passwordbtn.title = @"パスワード再送信";
+    passwordbtn.title = NSLocalizedString(@"TPLoginControllerResendPass", nil);
     passwordbtn.controllerAction = @"onSendPassword";
     
     [self.root addSection:section4];
@@ -78,7 +82,7 @@
     
     QSection *section5 = [[QSection alloc] init];
     QButtonElement *facebookbtn = [[QButtonElement alloc] initWithKey:@"button"];
-    facebookbtn.title = @"facebookで登録・ログイン";
+    facebookbtn.title = NSLocalizedString(@"TPLoginControllerFacebookRegister", nil);
     facebookbtn.controllerAction = @"onFacebookLogin";
     
     [self.root addSection:section5];
@@ -88,18 +92,17 @@
 
 - (void)onFacebookLogin{
     [[TPFacebook sharedInstance] openFacebook:TPLoginFacebook];
-    
-    
 }
 
 - (void)requestFromFacebook{
     [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error){
-        [self onRegistFacebook :result[@"email"] uid:result[@"id"] username:result[@"name"]];
+        [self onRegisterFacebook :result[@"email"] uid:result[@"id"] username:result[@"name"]];
         
     }];
 }
 
-- (void)onRegistFacebook:(NSString *)email uid:(NSString *)uid  username:(NSString *)username{
+- (void)onRegisterFacebook:(NSString *)email uid:(NSString *)uid username:(NSString *)username
+{
     TravelPhotoAPI *tp_api = [TravelPhotoAPI sharedInstance];
     
     if([tp_api.networkStatus boolValue] == NO){
@@ -157,25 +160,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)onSendPassword{
+- (void)onSendPassword
+{
     TravelPhotoAPI *tp_api = [TravelPhotoAPI sharedInstance];
     SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[tp_api sendPasswordUrl]];
     [self presentViewController:webViewController animated:YES completion:nil];
 }
 
-- (void)onRegist{
-    //登録画面に移動
+- (void)onRegister
+{
+    // 登録画面に移動
     QRootElement *root = [[QRootElement alloc] init];
     root.grouped = YES;
     TPRegisterController *viewController = (TPRegisterController *) [[TPRegisterController alloc] initWithRoot:root];
     [self.navigationController pushViewController:viewController animated:YES];
-    
 }
 
-
-- (void)onLogin{
-
+- (void)onLogin
+{
     [SVProgressHUD showWithStatus:NSLocalizedString(@"TPLoginControllerSending", nil) maskType:SVProgressHUDMaskTypeBlack];
+    // フォーム取得
     QEntryElement *email = (QEntryElement *)[self.root elementWithKey:@"email"];
     QEntryElement *password = (QEntryElement *)[self.root elementWithKey:@"password"];
     
@@ -185,7 +189,7 @@
         return;
     }
     
-    //通信処理
+    // 通信処理
     TravelPhotoAPI *tp_api = [TravelPhotoAPI sharedInstance];
     
     if([tp_api.networkStatus boolValue] == NO){
@@ -226,8 +230,8 @@
                                              
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              NSLog(@"Error: %@", error);
-                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"エラーが発生しました" message:@"メールアドレスまたはパスワードが間違っています"
-                                                                                               delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"TPLoginControllerErrorHappened", nil) message:NSLocalizedString(@"TPLoginControllerEmailErrorHappened", nil)
+                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"TPLoginControllerConfirm", nil) otherButtonTitles:nil];
                                              
                                              [alertView show];
 
@@ -238,9 +242,5 @@
                                          }];
     [sharedClient enqueueHTTPRequestOperation:operation];
 }
-
-
-
-
 
 @end

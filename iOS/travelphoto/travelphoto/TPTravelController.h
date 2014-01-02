@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TPTravelCell.h";
+#import "TPTravelCell.h"
 
 @interface TPTravelController : UITableViewController
 

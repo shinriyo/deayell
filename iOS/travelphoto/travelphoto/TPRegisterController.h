@@ -1,5 +1,5 @@
 //
-//  TPRegistController.h
+//  TPRegisterController.h
 //  travelphoto
 //
 //  Created by Yuuna Morisawa on 2013/06/30.

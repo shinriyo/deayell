@@ -1,7 +1,8 @@
 class Api::SessionsController < DeviseController
   before_filter :login_required, :except=>[:new, :create]  
   #before_filter :ensure_params_exist
- 
+  skip_before_filter :verify_authenticity_token
+
   respond_to :json
   
   def create

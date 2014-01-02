@@ -3,24 +3,23 @@
   travelphoto
 
   Created by 17age forever on 12/23/13.
-  Copyright (c) 2013 Yuuna Kurita. All rights reserved.
+  Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
 // TPLoginController
 TPLoginControllerSending = "송신중";
 TPLoginControllerNoFormData = "폼 에게 값 입력 안되어";
-// TODO:翻訳する
-TPLoginControllerLoginForm = "ログインフォーム";
-TPLoginControllerEmailMsg = "メールアドレスを入力してください";
-TPLoginControllerPasswordMsg = "パスワードを入力してください";
-TPLoginControllerPassword = "Password";
-TPLoginControllerLogin = "ログインする";
+TPLoginControllerLoginForm = "로그인 폼";
+TPLoginControllerEmailMsg = "메일주소 를 입력 해 주세요";
+TPLoginControllerPasswordMsg = "비밀번호 를 입력 해 주세요";
+TPLoginControllerPassword = "비밀번호";
+TPLoginControllerLogin = "로그인";
 TPLoginControllerNewRegister = "新規登録";
-TPLoginControllerResendPass = "パスワード再送信";
-TPLoginControllerFacebookRegister = "facebookで登録・ログイン";
-TPLoginControllerErrorHappened = "エラーが発生しました";
-TPLoginControllerEMaiErrorHappened = "メールアドレスまたはパスワードが間違っています";
-TPLoginControllerConfirm = "確認";
+TPLoginControllerResendPass = "비밀번호 재송신";
+TPLoginControllerFacebookRegister = "Facebook등록/등록";
+TPLoginControllerErrorHappened = "에러 가 발생했습니다";
+TPLoginControllerEmailErrorHappened = "메일주소 또는 비밀번호 가 잘못해요";
+TPLoginControllerConfirm = "확인";
 
 // TPRegisterController
 TPRegisterControllerRegister = "등록";
@@ -30,3 +29,14 @@ TPRegisterControllerEmail = "이메일";
 TPRegisterControllerUserName = "이름";
 TPRegisterControllerPassword = "비밀번호";
 TPRegisterControllerPasswordConfirm = "비밀번호（확인）";
+// TODO:
+TPRegisterControllerSending = "송신중";
+TPRegisterControllerNoFormData = "폼에 값이 입력 안 되었습니다. ";
+TPRegisterControllerCreateDone = "작성이 완료했습니다";
+TPRegisterControllerErrorHappened = "에러가 발생했습니다";
+TPRegisterControllerEmailErrorHappened = "메일 주소 또는 비밀번호가 틀립니다";
+TPRegisterControllerConfirm = "확인";
+
+// TPSettingController
+// TODO:
+TPSettingControllerLogout = "로그 아웃";

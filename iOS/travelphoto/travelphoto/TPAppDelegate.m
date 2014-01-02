@@ -201,18 +201,15 @@
         self.viewController.centerPanel =
         [[UINavigationController alloc]initWithRootViewController:(TPSettingController * )[QuickDialogController controllerForRoot:root]];
         
-    }
-    else{
+    } else {
         self.viewController.centerPanel =
         [[UINavigationController alloc]initWithRootViewController:[[NSClassFromString(userInfo[@"CLASS"]) alloc]init]];
     }
 }
 
-
-
-- (void)showLogin:(NSNotification *) notification{
-    
-    //NSLog(@"call ShowLogin");
+- (void)showLogin:(NSNotification *) notification
+{
+    // NSLog(@"call ShowLogin");
     static dispatch_once_t oncePredicate;
     
     dispatch_once(&oncePredicate, ^{
@@ -224,10 +221,10 @@
         _tpLoginNav = [[UINavigationController alloc] initWithRootViewController: _tpLoginController];
     
     });
-    [self.viewController presentViewController:_tpLoginNav animated:YES completion:nil];
-
     
+    [self.viewController presentViewController:_tpLoginNav animated:YES completion:nil];
 }
+
 /*
 
 #pragma mark -facebook

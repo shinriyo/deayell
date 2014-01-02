@@ -24,9 +24,6 @@
 @property (strong, nonatomic) TPLoginController *tpLoginController;
 @property (strong, nonatomic) UINavigationController *tpLoginNav;
 
-
-
-
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
