@@ -43,6 +43,7 @@
 }
 
 - (NSString *)signInPath {
+//    return @"/api/users/sign_in";
     return @"/api/users/sign_in";
     //[NSString stringWithFormat:@"%@/api/users", S_API_BASE];
 

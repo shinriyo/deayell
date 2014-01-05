@@ -1,4 +1,10 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  #protected
+
+  #def after_inactive_sign_up_path_for(resource)
+  #  signed_up_path
+  #end
+
   def facebook
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPMyPageController : UIViewController
+//@interface TPMyPageController : UIViewController
+@interface TPMyPageController :QuickDialogController
 
 @end

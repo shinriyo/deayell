@@ -6,9 +6,14 @@
   Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
+// Common
+CommonErrorHappened = "Error occured";
+CommonNoFormData = "Not filled in the form";
+CommonCreateDone = "Creating is done";
+CommonConfirm = "Confirm";
+
 // TPLoginController
 TPLoginControllerSending = "Sending";
-TPLoginControllerNoFormData = "Not filled in the form";
 TPLoginControllerLoginForm = "Login Form";
 TPLoginControllerEmailMsg = "Put your E-mail address";
 TPLoginControllerPasswordMsg = "Put your password";
@@ -19,7 +24,6 @@ TPLoginControllerResendPass = "Resend password";
 TPLoginControllerFacebookRegister = "Login/Register Facebook";
 TPLoginControllerErrorHappened = "Error occured";
 TPLoginControllerEmailErrorHappened = "Mistook E-mail address or password";
-TPLoginControllerConfirm = "confirm";
 
 // TPRegisterController
 TPRegisterControllerRegister = "Submit";
@@ -30,11 +34,8 @@ TPRegisterControllerUserName = "Name";
 TPRegisterControllerPassword = "Password";
 TPRegisterControllerPasswordConfirm = "Retype Password";
 TPRegisterControllerSending = "Sending";
-TPRegisterControllerNoFormData = "Form's data is empty.";
-TPRegisterControllerCreateDone = "Creating is done";
 TPRegisterControllerErrorHappened = "Error occured";
 TPRegisterControllerEmailErrorHappened = "Mistook E-mail address or password";
-TPRegisterControllerConfirm = "confirm";
 
 // TPSettingController
 // TODO:
@@ -42,8 +43,33 @@ TPSettingControllerLogout = "Logout";
 
 // TPTravelCreateController
 // TODO:
-TPTravelCreateControllerErrorHappened = "エラーが発生しました";
-TPTravelCreateControllerFrom = "%@から%@";
+TPTravelCreateControllerFrom = "from %@ to %@";
 
 // TPFriendController
+TPFriendControllerSearchFriend = "Search Friend";
+
+// TPFriendSearchController
 // TODO:
+TPFriendSearchControllerSearchFriend = "Search Friend";
+
+// TPLeftMenuController
+TPLeftMenuControllerMyPage = "MyPage";
+TPLeftMenuControllerTrip = "Trip";
+TPLeftMenuControllerFriend = "Friend";
+TPLeftMenuControllerSearchFriend = "Search Friend";
+TPLeftMenuControllerFriendTrip = "Friend Trip";
+TPLeftMenuControllerSetting = "Setting";
+
+// TPTravelCreateController
+// TODO:
+TPTravelCreateControllerRegiser = "Register";
+TPTravelCreateControllerCreateTripInfo = "Create trip information";
+TPTravelCreateControllerInputTitle = "Input the title";
+TPTravelCreateControllerTitle = "Title";
+TPTravelCreateControllerStartDate = "Start date";
+TPTravelCreateControllerEndDate = "End date";
+TPTravelCreateControllerSending = "Sending";
+TPTravelCreateControllerInvalidDate = "The date format is invalid";
+/*
+ "おかしい";
+ */

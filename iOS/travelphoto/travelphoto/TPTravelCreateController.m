@@ -30,27 +30,27 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIBarButtonItem *submitButtonItem =    [[UIBarButtonItem alloc] initWithTitle:@"登録"
+    UIBarButtonItem *submitButtonItem =    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"TPTravelCreateControllerRegiser", nil)
                                                                             style:UIBarButtonItemStyleDone
                                                                            target:self action:@selector(onSubmit)];
     [self.navigationItem setRightBarButtonItem:submitButtonItem];
     
-    self.root.title = @"旅情報作成";
+    self.root.title = NSLocalizedString(@"TPTravelCreateControllerCreateTripInfo", nil);
     
     QSection *section = [[QSection alloc] init];
     QEntryElement *title = [[QEntryElement alloc] initWithKey:@"title"];
     title.keyboardType = UIKeyboardAppearanceDefault;
-    title.placeholder = @"タイトルを入力してください";
+    title.placeholder = NSLocalizedString(@"TPTravelCreateControllerInputTitle", nil);
     title.bind = @"textValue:title";
-    title.title = @"タイトル";
+    title.title = NSLocalizedString(@"TPTravelCreateControllerTitle", nil);
     
     QDateTimeInlineElement *startdate = [[QDateTimeInlineElement alloc] initWithDate:[NSDate date] andMode:UIDatePickerModeDate];
-    startdate.title = @"開始日";
+    startdate.title = NSLocalizedString(@"TPTravelCreateControllerStartDate", nil);
     startdate.key = @"startdate";
 
 
     QDateTimeInlineElement *enddate = [[QDateTimeInlineElement alloc] initWithDate:[NSDate date] andMode:UIDatePickerModeDate];
-    enddate.title = @"終了日";
+    enddate.title = NSLocalizedString(@"TPTravelCreateControllerEndDate", nil);
     enddate.key = @"enddate";
     
     [section addElement:title];
@@ -63,18 +63,18 @@
 
 - (void)onSubmit
 {
-    [SVProgressHUD showWithStatus:@"送信中" maskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"TPTravelCreateControllerSending", nil) maskType:SVProgressHUDMaskTypeBlack];
     QEntryElement *title = (QEntryElement *)[self.root elementWithKey:@"title"];
     QDateTimeInlineElement *startdate = (QDateTimeInlineElement *)[self.root elementWithKey:@"startdate"];
     QDateTimeInlineElement *enddate = (QDateTimeInlineElement *)[self.root elementWithKey:@"enddate"];
-    
+
     if(startdate.dateValue == NULL || enddate.dateValue == NULL ||title.textValue == NULL){
-        [SVProgressHUD showErrorWithStatus:@"フォームに値が入力されていません。"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"CommonNoFormData", nil)];
         return;
     }
 
     if([startdate.dateValue compare:enddate.dateValue] == NSOrderedDescending){
-        [SVProgressHUD showErrorWithStatus:@"日付が不正です"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"TPTravelCreateControllerInvalidDate", nil)];
         return;
 
     }
@@ -111,13 +111,13 @@
 
                                              [self.navigationController popToRootViewControllerAnimated:TRUE];
 
-                                             [SVProgressHUD showSuccessWithStatus:@"作成が完了しました"];
+                                             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"CommonCreateDone", nil)];
 
                                              
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              NSLog(@"Error: %@", error);
-                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"エラーが発生しました" message:@"メールアドレスまたはパスワードが間違っています"
-                                                                                               delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+//                                             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"エラーが発生しました" message:@"メールアドレスまたはパスワードが間違っています"
+                                               UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"CommonErrorHappened", nil) message:@"おかしい"                                                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"CommonConfirm", nil) otherButtonTitles:nil];
                                              
                                              [alertView show];
                                              

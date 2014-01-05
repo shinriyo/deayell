@@ -30,8 +30,15 @@
 	// Do any additional setup after loading the view.
     QSection *section = [[QSection alloc] init];
     QButtonElement *logoutbtn = [[QButtonElement alloc] initWithKey:@"button"];
-    logoutbtn.title = @"ログアウト";
+    logoutbtn.title = NSLocalizedString(@"TPSettingControllerLogout", nil);
     logoutbtn.controllerAction = @"onLogout";
+
+    // TODO:
+    /*
+    QButtonElement *logoutbtn = [[QButtonElement alloc] initWithKey:@"button"];
+    logoutbtn.title = NSLocalizedString(@"TPSettingControllerLogout", nil);
+    logoutbtn.controllerAction = @"onLogout";
+    */
     
     [self.root addSection:section];
 

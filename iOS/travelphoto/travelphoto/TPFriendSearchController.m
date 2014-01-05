@@ -37,8 +37,8 @@
     
     // we need to be the delegate so the cancel button works
     searchBar.delegate = self;
-    searchBar.placeholder = @"友達を検索";
-    
+    searchBar.placeholder = NSLocalizedString(@"TPFriendSearchControllerSearchFriend", nil);
+
     // create the Search Display Controller with the above Search Bar
     _controller = [[UISearchDisplayController alloc]initWithSearchBar:searchBar contentsController:self];
     _controller.searchResultsDataSource = self;
@@ -73,9 +73,6 @@
         NSString *friend_uid = [friend_uid_list componentsJoinedByString:@","];
         //これをpostして受け取るところを記述
     }];
-    
-    
-    
 }
 
 
@@ -170,12 +167,13 @@
                                          
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              NSLog(@"Error: %@", error);
+                                             // TODO:
+                                             NSLog(@"Error: %@", error.localizedRecoverySuggestion);
                                              
-                                             [SVProgressHUD showErrorWithStatus:@"エラーが発生しました"];
+                                             [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"CommonErrorHappened", nil)];
                                              
                                          }];
     [sharedClient enqueueHTTPRequestOperation:operation];
-    
 }
 
 

@@ -69,7 +69,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//
+// 抜けてた
 - (void)onSubmit
 {
     [SVProgressHUD showWithStatus:NSLocalizedString(@"TPRegisterControllerSending", nil) maskType:SVProgressHUDMaskTypeBlack];
@@ -80,7 +80,7 @@
     QEntryElement *username = (QEntryElement *)[self.root elementWithKey:@"username"];
     
     if(email.textValue == NULL || password.textValue == NULL || password_confirm.textValue == NULL || username.textValue == NULL ) {
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"TPRegisterControllerNoFormData", nil)];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"CommonNoFormData", nil)];
         return;
     }
 
@@ -113,13 +113,13 @@
                                              
                                              [self.navigationController popToRootViewControllerAnimated:YES];
                                              
-                                             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"TPRegisterControllerCreateDone", nil)];
+                                             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"CommonCreateDone", nil)];
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              //NSLog(@"Error: %@", error);
                                              NSLog(@"Error: %@", [error localizedRecoverySuggestion]);
                                              
                                              UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"TPRegisterControllerErrorHappened", nil) message:NSLocalizedString(@"TPRegisterControllerEmailErrorHappened", nil)
-                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"TPRegisterControllerConfirm", nil) otherButtonTitles:nil];
+                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"CommonConfirm", nil) otherButtonTitles:nil];
                                              [alertView show];
                                              [SVProgressHUD dismiss];
                                          }];

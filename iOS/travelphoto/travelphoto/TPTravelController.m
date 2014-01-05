@@ -170,7 +170,7 @@
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              NSLog(@"Error: %@", error);
 
-                                             [SVProgressHUD showErrorWithStatus:@"エラーが発生しました"];
+                                             [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"CommonErrorHappened", nil)];
                                              
                                          }];
     [sharedClient enqueueHTTPRequestOperation:operation];

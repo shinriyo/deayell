@@ -39,7 +39,7 @@
     
     // we need to be the delegate so the cancel button works
     searchBar.delegate = self;
-    searchBar.placeholder = @"友達を検索";
+    searchBar.placeholder = NSLocalizedString(@"TPFriendControllerSearchFriend", nil);
     
     // create the Search Display Controller with the above Search Bar
     self.controller = [[UISearchDisplayController alloc]initWithSearchBar:searchBar contentsController:self];

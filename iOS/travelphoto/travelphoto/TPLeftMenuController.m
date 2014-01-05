@@ -52,12 +52,12 @@
 - (NSArray *)menuList
 {
     if (!_menuList) {
-        _menuList = @[@[@"マイページ",@"TPMyPageController"],
-                      @[@"旅",@"TPTravelController"],
-                      @[@"友達",@"TPFriendController"],
-                      @[@"友達を検索",@"TPFriendSearchController"],
-                      @[@"友達の旅",@"TPFriendTravelController"],
-                      @[@"設定",@"TPSettingController"]];
+        _menuList = @[@[NSLocalizedString(@"TPLeftMenuControllerMyPage", nil), @"TPMyPageController"],
+                      @[NSLocalizedString(@"TPLeftMenuControllerTrip", nil), @"TPTravelController"],
+                      @[NSLocalizedString(@"TPLeftMenuControllerFriend", nil), @"TPFriendController"],
+                      @[NSLocalizedString(@"TPLeftMenuControllerSearchFriend", nil), @"TPFriendSearchController"],
+                      @[NSLocalizedString(@"TPLeftMenuControllerFriendTrip", nil), @"TPFriendTravelController"],
+                      @[NSLocalizedString(@"TPLeftMenuControllerSetting", nil), @"TPSettingController"]];
     }
     return _menuList;
 }

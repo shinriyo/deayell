@@ -6,9 +6,14 @@
   Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
+// Common
+CommonErrorHappened = "エラーが発生しました";
+CommonNoFormData = "フォームに値が入力されていません。";
+CommonCreateDone = "作成が完了しました";
+CommonConfirm = "確認";
+
 // TPLoginController
 TPLoginControllerSending = "送信中";
-TPLoginControllerNoFormData = "フォームに値が入力されていません。";
 TPLoginControllerLoginForm = "ログインフォーム";
 TPLoginControllerEmailMsg = "メールアドレスを入力してください";
 TPLoginControllerPasswordMsg = "パスワードを入力してください";
@@ -19,7 +24,6 @@ TPLoginControllerResendPass = "パスワード再送信";
 TPLoginControllerFacebookRegister = "facebookで登録・ログイン";
 TPLoginControllerErrorHappened = "エラーが発生しました";
 TPLoginControllerEMaiErrorHappened = "メールアドレスまたはパスワードが間違っています";
-TPLoginControllerConfirm = "確認";
 
 // TPRegisterController
 TPRegisterControllerRegister = "登録";
@@ -30,11 +34,8 @@ TPRegisterControllerUserName = "ユーザー名";
 TPRegisterControllerPassword = "パスワード";
 TPRegisterControllerPasswordConfirm = "パスワード（確認）";
 TPRegisterControllerSending = "送信中";
-TPRegisterControllerNoFormData = "フォームに値が入力されていません。";
-TPRegisterControllerCreateDone = "作成が完了しました";
 TPRegisterControllerErrorHappened = "エラーが発生しました";
 TPRegisterControllerEmailErrorHappened = "メールアドレスまたはパスワードが間違っています";
-TPRegisterControllerConfirm = "確認";
     
 // TPSettingController
 // TODO:
@@ -47,4 +48,30 @@ TPTravelCreateControllerFrom = "%@から%@";
 // TPTravelShowController
 
 // TPFriendController
+TPFriendControllerSearchFriend = "友達を検索";
+
+// TPFriendSearchController
+TPFriendSearchControllerSearchFriend = "友達を検索";
+
+// TPLeftMenuController
+TPLeftMenuControllerMyPage = "マイページ";
+TPLeftMenuControllerTrip = "旅";
+TPLeftMenuControllerFriend = "友達";
+TPLeftMenuControllerSearchFriend = "友達を検索";
+TPLeftMenuControllerFriendTrip = "友達の旅";
+TPLeftMenuControllerSetting = "設定";
+
+// TPTravelCreateController
 // TODO:
+TPTravelCreateControllerRegiser = "登録";
+TPTravelCreateControllerCreateTripInfo = "旅情報作成";
+TPTravelCreateControllerInputTitle = "タイトルを入力してください";
+TPTravelCreateControllerTitle = "タイトル";
+TPTravelCreateControllerStartDate = "開始日";
+TPTravelCreateControllerEndDate = "終了日";
+TPTravelCreateControllerSending = "送信中";
+TPTravelCreateControllerInvalidDate = "日付が不正です";
+
+/*
+"おかしい";
+*/

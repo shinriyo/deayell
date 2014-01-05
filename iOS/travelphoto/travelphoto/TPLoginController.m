@@ -57,7 +57,7 @@
     QButtonElement *loginbtn = [[QButtonElement alloc] initWithKey:@"button"];
     loginbtn.title = NSLocalizedString(@"TPLoginControllerLogin", nil);
     loginbtn.controllerAction = @"onLogin";
-    
+
     [self.root addSection:section2];
     [section2 addElement: loginbtn];
     
@@ -124,9 +124,8 @@
                                          JSONRequestOperationWithRequest:[sharedClient requestWithMethod:@"POST"
                                                                                                     path: path
                                                                                               parameters: userDic
-                                                                          
                                                                           ]
-                                         
+
                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response,id JSON) {
                                              
                                              TPUserInfo *sharedInstance = [TPUserInfo sharedInstance];
@@ -139,19 +138,10 @@
                                              [[NSNotificationCenter defaultCenter] postNotificationName:TPShowPanel object:self userInfo:dic];
                                              
                                              [self dismissViewControllerAnimated:YES completion:nil];
-                                             
-                                             
-                                             
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                             
-                                             
                                              [SVProgressHUD dismiss];
-                                             
-                                             
                                          }];
     [sharedClient enqueueHTTPRequestOperation:operation];
-
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -185,7 +175,7 @@
     
     
     if(email.textValue == NULL || password.textValue == NULL){
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"TPLoginControllerSending", nil)];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"CommonNoFormData", nil)];
         return;
     }
     
@@ -197,7 +187,6 @@
     }
 
     AFHTTPClient *sharedClient = [TravelPhotoAPI sharedClient];
-
     
     NSDictionary *userDic = @{@"user[email]": email.textValue ,
                               @"user[password]": password.textValue};
@@ -205,12 +194,12 @@
     NSString *path = [tp_api signInPath];
     
     [sharedClient setParameterEncoding:AFFormURLParameterEncoding];
+    
     AFJSONRequestOperation *operation = [AFJSONRequestOperation
                                         
                                          JSONRequestOperationWithRequest:[sharedClient requestWithMethod:@"POST"
                                                                                                     path: path
                                                                                               parameters: userDic
-                                                                          
                                                                           ]
 
                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response,id JSON) {
@@ -225,13 +214,13 @@
                                              [[NSNotificationCenter defaultCenter] postNotificationName:TPShowPanel object:self userInfo:dic];
                                              
                                              [self dismissViewControllerAnimated:YES completion:nil];
-                                             
-                                             
-                                             
+
                                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                              NSLog(@"Error: %@", error);
+                                             NSLog(@"Suggestion: %@", error.localizedRecoverySuggestion);
+                                             
                                              UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"TPLoginControllerErrorHappened", nil) message:NSLocalizedString(@"TPLoginControllerEmailErrorHappened", nil)
-                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"TPLoginControllerConfirm", nil) otherButtonTitles:nil];
+                                                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"CommonConfirm", nil) otherButtonTitles:nil];
                                              
                                              [alertView show];
 
@@ -240,6 +229,7 @@
                                              
                                             
                                          }];
+
     [sharedClient enqueueHTTPRequestOperation:operation];
 }
 

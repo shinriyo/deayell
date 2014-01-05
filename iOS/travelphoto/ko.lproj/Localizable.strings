@@ -6,9 +6,14 @@
   Copyright (c) 2013 Shinsuke Sugita. All rights reserved.
 */
 
+// Common
+CommonErrorHappened = "에러가 발생했습니다";
+CommonNoFormData = "폼 에게 값 입력 안되어";
+CommonCreateDone = "작성이 완료했습니다";
+CommonConfirm = "확인";
+
 // TPLoginController
 TPLoginControllerSending = "송신중";
-TPLoginControllerNoFormData = "폼 에게 값 입력 안되어";
 TPLoginControllerLoginForm = "로그인 폼";
 TPLoginControllerEmailMsg = "메일주소 를 입력 해 주세요";
 TPLoginControllerPasswordMsg = "비밀번호 를 입력 해 주세요";
@@ -19,7 +24,6 @@ TPLoginControllerResendPass = "비밀번호 재송신";
 TPLoginControllerFacebookRegister = "Facebook등록/등록";
 TPLoginControllerErrorHappened = "에러 가 발생했습니다";
 TPLoginControllerEmailErrorHappened = "메일주소 또는 비밀번호 가 잘못해요";
-TPLoginControllerConfirm = "확인";
 
 // TPRegisterController
 TPRegisterControllerRegister = "등록";
@@ -30,11 +34,8 @@ TPRegisterControllerUserName = "이름";
 TPRegisterControllerPassword = "비밀번호";
 TPRegisterControllerPasswordConfirm = "비밀번호（확인）";
 TPRegisterControllerSending = "송신중";
-TPRegisterControllerNoFormData = "폼에 값이 입력 안 되었습니다. ";
-TPRegisterControllerCreateDone = "작성이 완료했습니다";
 TPRegisterControllerErrorHappened = "에러가 발생했습니다";
 TPRegisterControllerEmailErrorHappened = "메일 주소 또는 비밀번호가 틀립니다";
-TPRegisterControllerConfirm = "확인";
 
 // TPSettingController
 // TODO:
@@ -42,8 +43,36 @@ TPSettingControllerLogout = "로그 아웃";
 
 // TPTravelCreateController
 // TODO:
-TPTravelCreateControllerErrorHappened = "エラーが発生しました";
+TPTravelCreateControllerErrorHappened = "에러가 발생했습니다";
 TPTravelCreateControllerFrom = "%@から%@";
 
 // TPFriendController
+TPFriendControllerSearchFriend = "친구 를 찾다";
+
+// TPFriendSearchController
 // TODO:
+TPFriendSearchControllerSearchFriend = "친구 를 찾다";
+
+// TPLeftMenuController
+// TODO:
+TPLeftMenuControllerMyPage = "マイページ";
+TPLeftMenuControllerTrip = "旅";
+TPLeftMenuControllerFriend = "友達";
+TPLeftMenuControllerSearchFriend = "친구 를 찾다";
+TPLeftMenuControllerFriendTrip = "友達の旅";
+TPLeftMenuControllerSetting = "設定";
+
+// TPTravelCreateController
+// TODO:
+TPTravelCreateControllerRegiser = "登録";
+TPTravelCreateControllerCreateTripInfo = "旅情報作成";
+TPTravelCreateControllerInputTitle = "タイトルを入力してください";
+TPTravelCreateControllerTitle = "タイトル";
+TPTravelCreateControllerStartDate = "開始日";
+TPTravelCreateControllerEndDate = "終了日";
+TPTravelCreateControllerSending = "送信中";
+TPTravelCreateControllerInvalidDate = "日付が不正です";
+
+/*
+ "おかしい";
+ */

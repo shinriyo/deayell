@@ -28,7 +28,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
+
+    // TODO:作る
+    QSection *section = [[QSection alloc] initWithTitle:@"TODO"];
+    QEntryElement *email = [[QEntryElement alloc] initWithKey:@"email"];
+    email.keyboardType = UIKeyboardTypeEmailAddress;
+    email.bind = @"textValue:email";
+    //email.title = NSLocalizedString(@"HOGE", nil);
+    email.title = @"テスト";
+
+    [self.root addSection:section];
+    [section addElement: email];
 }
 
 - (void)didReceiveMemoryWarning

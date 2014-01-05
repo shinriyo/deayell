@@ -1,4 +1,5 @@
 %h2 Sign in
+= csrf_meta_tags
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   %div
     = f.label :email
@@ -14,4 +15,4 @@
       = f.label :remember_me
   %div= f.submit "Sign in"
 
--# = render "user/shared/links"
+= render "users/shared/links"
